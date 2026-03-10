@@ -5,11 +5,13 @@ import datetime
 import logging
 from tqdm import tqdm
 import torch
+import torch.nn as nn
 torch.autograd.set_detect_anomaly(True)
 import torch.optim as optim
 
 # Import Custom Modules
 from dataset import get_dataloader
+from dataset_cholecT50 import get_dataloader_t50
 from models.tdt import TriDiffTransformer
 from losses.asl import AsymmetricLossOptimized
 from losses.mcl import MutualChannelLoss
@@ -55,11 +57,11 @@ def calculate_phase(epoch, total_epochs=80):
     Determines the current training phase (Curriculum Learning).
     
     Why Phased Training?
-    - Phase 1 (0-20): Warmup. We focus on basic instrument/verb localization. 
+    - Phase 1 (0-10): Warmup. We focus on basic instrument/verb localization. 
       The model learns 'where' and 'what' without the complex refiner.
-    - Phase 2 (20-50): Tail Boost. We activate the Contrastive Memory Bank. 
+    - Phase 2 (10-25): Tail Boost. We activate the Contrastive Memory Bank. 
       This helps the model 'memorize' rare triplets (tail classes).
-    - Phase 3 (50-80): Refinement. The Denoising Semantic Refiner (DSR) is engaged.
+    - Phase 3 (25+): Refinement. The Denoising Semantic Refiner (DSR) is engaged.
       The model now uses clinical logic to fix impossible predictions.
     """
     if epoch < 10:
@@ -68,6 +70,7 @@ def calculate_phase(epoch, total_epochs=80):
         return 2 
     else:
         return 3 
+
 def train_one_epoch(epoch, model, dataloader, optimizer, criterion_dict, device, phase, logger, scaler, scheduler, args):
     model.train()
     
@@ -79,8 +82,21 @@ def train_one_epoch(epoch, model, dataloader, optimizer, criterion_dict, device,
     for batch_idx, (frames, labels) in enumerate(progress_bar):
         # Optimization: non_blocking=True for faster GPU transfer
         frames = frames.to(device, non_blocking=True)
-        # Note: Triplet GT is idx 3
-        inst_gt, verb_gt, target_gt, triplet_gt = [L.to(device, non_blocking=True) for L in labels[:4]]
+        
+        # Check if doing Phase 2 (CholecT50 with phases) or Phase 1 (CholecT45)
+        is_phase2_task = args.dataset_type == 'cholecT50'
+        
+        if is_phase2_task:
+            phase_gt, triplet_gt, _ = labels
+            phase_gt = phase_gt.to(device, non_blocking=True)
+            triplet_gt = triplet_gt.to(device, non_blocking=True)
+            # Phase 2 model doesn't use the intermediate IVT ground truths in its main loop if we just want triplet and phase
+        else:
+            inst_gt, verb_gt, target_gt, triplet_gt, _ = labels
+            inst_gt = inst_gt.to(device, non_blocking=True)
+            verb_gt = verb_gt.to(device, non_blocking=True)
+            target_gt = target_gt.to(device, non_blocking=True)
+            triplet_gt = triplet_gt.to(device, non_blocking=True)
         
         # Turn off refiner gradients / usage if during early phases
         use_refiner = (phase == 3)
@@ -88,29 +104,36 @@ def train_one_epoch(epoch, model, dataloader, optimizer, criterion_dict, device,
         
         # Mixed Precision Autocast (Standardized for modern PyTorch)
         with torch.amp.autocast('cuda', enabled=args.use_amp):
-            logits_I, logits_V, logits_T, triplet_logits, (z_I, z_V, z_T), spatial_feats = model(frames)
+            logits_I, logits_V, logits_T, triplet_logits, (z_I, z_V, z_T), spatial_feats, phase_logits = model(frames)
             
-            # 1. Base Multi-Label Detection Loss
-            loss_I = criterion_dict['asl'](logits_I, inst_gt)
-            loss_V = criterion_dict['asl'](logits_V, verb_gt)
-            loss_T = criterion_dict['asl'](logits_T, target_gt)
+            loss = 0.0
+            if not is_phase2_task:
+                # 1. Base Multi-Label Detection Loss (Phase 1)
+                loss_I = criterion_dict['asl'](logits_I, inst_gt)
+                loss_V = criterion_dict['asl'](logits_V, verb_gt)
+                loss_T = criterion_dict['asl'](logits_T, target_gt)
+                loss = loss + loss_I + loss_V + loss_T
             
-            loss = loss_I + loss_V + loss_T
-            
+            if is_phase2_task:
+                # Phase Detection Loss (CrossEntropy)
+                # Ensure phase_logits matches shape of phase_gt: phase_logits is (B, 7)
+                loss_phase = criterion_dict['ce'](phase_logits, phase_gt)
+                loss = loss + (args.lam_phase * loss_phase)
+                
             # 2. Mutual Channel Loss (Always Active)
             if args.lam_mcl > 0:
                 loss_mcl = criterion_dict['mcl'](spatial_feats)
                 loss = loss + loss_mcl
             
-            # 3. SupCon Loss (Phase 2+)
-            if phase >= 2:
-                 # We determine the ground truth argmax for contrastive clustering
+            # 3. SupCon Loss (Phase 2+) (Assuming triplet features z_V holds for action representation)
+            if phase >= 2 and args.lam_supcon > 0:
                  triplet_class = torch.argmax(triplet_gt, dim=1)
                  loss_supcon = criterion_dict['supcon'](z_V, triplet_class) 
                  loss = loss + (args.lam_supcon * loss_supcon)
                  
             # 4. Refiner KL/ASL Loss (Phase 3)
-            if phase == 3 and triplet_logits is not None:
+            # if is_phase2_task, the refiner still outputs triplet probabilities
+            if use_refiner and triplet_logits is not None:
                  loss_refiner = criterion_dict['asl'](triplet_logits, triplet_gt)
                  loss = loss + (args.lam_dsr * loss_refiner)
                  
@@ -131,14 +154,9 @@ def train_one_epoch(epoch, model, dataloader, optimizer, criterion_dict, device,
         log_freq = 5 if args.sample_run else 50
         if batch_idx % log_freq == 0:
              avg_loss_so_far = total_loss / (batch_idx + 1)
-             # Educational Logging: Helping the user understand the loss dynamics
              msg = f"[Epoch {epoch} | Batch {batch_idx}/{len(dataloader)}] Loss: {current_batch_loss:.4f} (Avg: {avg_loss_so_far:.4f}) | Phase {phase}"
-             if phase == 1:
-                 msg += " -> [Learning basic features]"
-             elif phase == 2:
-                 msg += " -> [Boosting rare classes with Memory Bank]"
-             elif phase == 3:
-                 msg += " -> [Refining with Clinical Logic]"
+             if is_phase2_task:
+                 msg += f" -> [Learning phase features ({args.plan})]"
              logger.info(msg)
                          
         if args.sample_run and batch_idx >= 5:
@@ -160,31 +178,25 @@ def main(args):
     logger.info(f"Utilizing Device: {device}")
     
     # 1. Dataset Initialization
-    logger.info(f"Initializing DataLoaders from: {args.dataset_dir}")
-    # Optimization: Split dataset into Train and Val for faster, meaningful metrics
-    train_dl, _ = get_dataloader(
-        args.dataset_dir, 
-        split='train',
-        batch_size=args.batch_size, 
-        num_workers=args.num_workers,
-        pin_memory=args.pin_memory
-    )
-    val_dl, _ = get_dataloader(
-        args.dataset_dir, 
-        split='val',
-        batch_size=args.batch_size, 
-        num_workers=args.num_workers,
-        pin_memory=args.pin_memory
-    )
+    logger.info(f"Initializing DataLoaders for {args.dataset_type} from: {args.dataset_dir}")
+    if args.dataset_type == 'cholecT50':
+        train_dl, _ = get_dataloader_t50(args.dataset_dir, split='train', batch_size=args.batch_size, num_workers=args.num_workers, pin_memory=args.pin_memory)
+        val_dl, _ = get_dataloader_t50(args.dataset_dir, split='val', batch_size=args.batch_size, num_workers=args.num_workers, pin_memory=args.pin_memory)
+    else:
+        train_dl, _ = get_dataloader(args.dataset_dir, split='train', batch_size=args.batch_size, num_workers=args.num_workers, pin_memory=args.pin_memory)
+        val_dl, _ = get_dataloader(args.dataset_dir, split='val', batch_size=args.batch_size, num_workers=args.num_workers, pin_memory=args.pin_memory)
     
     # 2. Model Initialization
-    logger.info("Initializing Tri-Diff-Transformer (TDT) Backbone...")
-    model = TriDiffTransformer(use_refiner=True)
+    logger.info(f"Initializing Tri-Diff-Transformer (TDT) Backbone (Plan {args.plan})...")
+    model = TriDiffTransformer(use_refiner=True, plan=args.plan, num_phases=7)
     model = model.to(device)
     
     # 3. Optimizers & Losses
     backbone_params = list(model.backbone.parameters())
     head_params = list(model.t_encoder.parameters()) + list(model.decoder.parameters())
+    if args.dataset_type == 'cholecT50':
+        head_params += list(model.phase_head.parameters())
+        
     if model.use_refiner:
         head_params += list(model.refiner.parameters())
     
@@ -225,7 +237,8 @@ def main(args):
              feature_dim=1024, 
              queue_size=args.supcon_bank_size, 
              tail_classes=tail_classes
-        ).to(device)
+        ).to(device),
+        'ce': nn.CrossEntropyLoss().to(device)
     }
     
     # 4. Master Training Loop
@@ -250,7 +263,7 @@ def main(args):
         
         # Validation Pass on Val Set (Much faster than full dataset)
         logger.info(f"--- Running Evaluation pass for Epoch {epoch} ---")
-        eval_metric = evaluate_model(model, val_dl, device, logger, phase, is_sample_run=args.sample_run)
+        eval_metric = evaluate_model(model, val_dl, device, logger, phase, is_sample_run=args.sample_run, is_phase2_task=(args.dataset_type == 'cholecT50'))
         
         # Sample mode short-circuit
         if args.sample_run and epoch == 3:
@@ -261,7 +274,7 @@ def main(args):
         is_best = eval_metric > best_mAP
         if is_best:
             best_mAP = eval_metric
-            logger.info(f"New Best Triplet mAP: {best_mAP:.4f} attained at Epoch {epoch}")
+            logger.info(f"New Best Target Metric: {best_mAP:.4f} attained at Epoch {epoch}")
             # We also save a 'best_model.pt' to always have the absolute top performer available,
             # regardless of the 5-epoch interval. This ensures no peak performance is lost.
             best_path = "logs/best_model.pt"
@@ -281,8 +294,10 @@ def main(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("Tri-Diff-Transformer Training Script")
-    parser.add_argument("--dataset_dir", type=str, default="/raid/manoranjan/rampreetham/CholecT45")
-    parser.add_argument("--device", type=str, default="cuda:1")
+    parser.add_argument("--dataset_dir", type=str, default="/raid/manoranjan/rampreetham/CholecT50")
+    parser.add_argument("--dataset_type", type=str, default="cholecT50", choices=['cholecT45', 'cholecT50'])
+    parser.add_argument("--plan", type=str, default="A", choices=['A', 'B'], help="Architectural path for phase 2. A: Temporal Transformer, B: Mocked TeCNO light MLP")
+    parser.add_argument("--device", type=str, default="cuda:0")
     parser.add_argument("--batch_size", type=int, default=64, help="Batch Size. Warning: 64 requires high VRAM. Dial down to 32 and use grad_accum=4 if OOM occurs.")
     parser.add_argument("--grad_accum_steps", type=int, default=2, help="Gradient Accumulation Steps")
     parser.add_argument("--num_workers", type=int, default=16)
@@ -297,6 +312,7 @@ if __name__ == "__main__":
     parser.add_argument("--lam_mcl", type=float, default=1.0)
     parser.add_argument("--lam_supcon", type=float, default=0.5)
     parser.add_argument("--lam_dsr", type=float, default=0.1)
+    parser.add_argument("--lam_phase", type=float, default=1.0)
     parser.add_argument("--supcon_temp", type=float, default=0.07)
     parser.add_argument("--supcon_bank_size", type=int, default=512)
     parser.add_argument("--pin_memory", action="store_true", default=False, help="Enable pin_memory in DataLoader (Warning: can cause 'invalid argument' error on some DGX setups)")
