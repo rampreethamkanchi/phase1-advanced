@@ -54,7 +54,8 @@ def evaluate_model(model, dataloader, device, logger, phase=3, is_sample_run=Fal
             
             # Forward pass
             model.use_refiner = (phase == 3)
-            logits_I, logits_V, logits_T, triplet_logits, _, _, phase_logits = model(frames)
+            # TDT returns 9 values now
+            logits_I, logits_V, logits_T, triplet_logits, _, _, phase_logits, _, _ = model(frames)
             
             if is_phase2_task:
                  _, predicted_phases = torch.max(phase_logits, 1)

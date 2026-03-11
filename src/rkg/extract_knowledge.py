@@ -32,27 +32,39 @@ class KnowledgeExtractor:
         Use only these entity types: {SURGICAL_ONTOLOGY['instruments']} and {SURGICAL_ONTOLOGY['anatomy']}.
         Use only these relations: {SURGICAL_ONTOLOGY['relations']} or {SURGICAL_ONTOLOGY['spatial_relations']}.
         
+        CRITICAL: Respond ONLY with a valid JSON list. No preamble or conversational filler.
+        
         Format your output as a JSON list of objects:
         [
           {{"subject": "...", "relation": "...", "object": "...", "risk": "Low/Medium/High/Critical", "explanation": "..."}}
         ]
         
         Text:
-        {text_chunk[:2000]} 
+        {text_chunk[:3000]} 
         """
         
         payload = {
             "model": self.model,
             "prompt": prompt,
             "stream": False,
-            "format": "json"
+            "options": {
+                "temperature": 0.0,
+                "num_ctx": 4096
+            }
         }
         
         try:
-            response = requests.post(self.ollama_url, json=payload, timeout=60)
+            response = requests.post(self.ollama_url, json=payload, timeout=120)
             if response.status_code == 200:
                 result = response.json()
-                return json.loads(result['response'])
+                clean_response = result['response'].strip()
+                # Simple extraction of JSON block if preamble exists
+                if "[" in clean_response and "]" in clean_response:
+                    start = clean_response.find("[")
+                    end = clean_response.rfind("]") + 1
+                    json_str = clean_response[start:end]
+                    return json.loads(json_str)
+                return json.loads(clean_response)
         except Exception as e:
             print(f"LLM Error: {e}")
             return []
@@ -76,25 +88,39 @@ def main(args):
             return
             
         pdf_files = [f for f in os.listdir(args.pdf_dir) if f.endswith('.pdf')]
-        for pdf in pdf_files:
-            print(f"Processing {pdf}...")
+        if args.limit and len(pdf_files) > args.limit:
+             pdf_files = pdf_files[:args.limit]
+             
+        for i, pdf in enumerate(pdf_files):
+            print(f"[{i+1}/{len(pdf_files)}] Processing {pdf}...", flush=True)
             text = extractor.extract_text_from_pdf(os.path.join(args.pdf_dir, pdf))
+            if not text:
+                 print(f"Skipping {pdf} (No text extracted)", flush=True)
+                 continue
+                 
             # Chunking text for LLM context window (simple split for demo)
-            chunks = [text[i:i+2000] for i in range(0, len(text), 2000)]
-            for chunk in chunks[:3]: # Limit to first 3 chunks for test
+            chunks = [text[j:j+3000] for j in range(0, len(text), 3000)]
+            
+            # For each PDF, we take first 5 chunks to avoid infinite loops during pilot
+            chunk_limit = 5
+            for j, chunk in enumerate(chunks[:chunk_limit]):
+                print(f"  - Extracting from chunk {j+1}/{min(len(chunks), chunk_limit)}...", flush=True)
                 triplets = extractor.get_triplets_from_llm(chunk)
-                all_extracted_rules.extend(triplets)
+                if triplets:
+                     print(f"    + Found {len(triplets)} triplets.", flush=True)
+                     all_extracted_rules.extend(triplets)
                 
     # Save extracted rules
     output_path = "src/rkg/extracted_rules.json"
     with open(output_path, 'w') as f:
         json.dump(all_extracted_rules, f, indent=4)
-    print(f"Saved {len(all_extracted_rules)} rules to {output_path}")
+    print(f"Saved total {len(all_extracted_rules)} rules to {output_path}", flush=True)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--pdf_dir", type=str, default="/raid/manoranjan/rampreetham/medical_literature/")
     parser.add_argument("--model", type=str, default="llama3")
     parser.add_argument("--mock", action="store_true", help="Use seed knowledge instead of real LLM")
+    parser.add_argument("--limit", type=int, default=3, help="Limit number of PDFs to process")
     args = parser.parse_args()
     main(args)

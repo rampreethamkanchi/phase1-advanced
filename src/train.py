@@ -102,9 +102,10 @@ def train_one_epoch(epoch, model, dataloader, optimizer, criterion_dict, device,
         use_refiner = (phase == 3)
         model.use_refiner = use_refiner
         
-        # Mixed Precision Autocast (Standardized for modern PyTorch)
+        # Mixed Precision Autocast (Standardized for        # Mixed Precision
         with torch.amp.autocast('cuda', enabled=args.use_amp):
-            logits_I, logits_V, logits_T, triplet_logits, (z_I, z_V, z_T), spatial_feats, phase_logits = model(frames)
+            # TDT returns 9 values now (added edge_logits, energy_logits for Phase 3)
+            logits_I, logits_V, logits_T, triplet_logits, (z_I, z_V, z_T), spatial_feats, phase_logits, _, _ = model(frames)
             
             loss = 0.0
             if not is_phase2_task:
@@ -277,7 +278,8 @@ def main(args):
             logger.info(f"New Best Target Metric: {best_mAP:.4f} attained at Epoch {epoch}")
             # We also save a 'best_model.pt' to always have the absolute top performer available,
             # regardless of the 5-epoch interval. This ensures no peak performance is lost.
-            best_path = "logs/best_model.pt"
+            # Specific naming to prevent overwriting different tasks
+            best_path = f"logs/best_{args.dataset_type}_{args.plan}_phase{phase}.pt"
             torch.save(model.state_dict(), best_path)
             logger.info(f"Absolute best model updated at: {best_path}")
 
@@ -285,7 +287,7 @@ def main(args):
         # This satisfies the user's request: "save... after every 5 epochs... only if its better than earlier"
         if epoch % 5 == 0 or epoch == num_epochs:
              if is_best:
-                 checkpoint_path = f"logs/checkpoint_ep{epoch}.pt"
+                 checkpoint_path = f"logs/checkpoint_{args.dataset_type}_{args.plan}_ep{epoch}.pt"
                  torch.save(model.state_dict(), checkpoint_path)
                  logger.info(f"Interval Checkpoint: Performance improved! Saved to: {checkpoint_path}")
              else:

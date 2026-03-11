@@ -143,9 +143,9 @@ def main(args):
         is_best = eval_metric > best_mAP
         if is_best:
             best_mAP = eval_metric
-            best_path = "logs/best_ssg_model.pt"
+            best_path = f"logs/best_ssg_{args.plan}_model.pt"
             torch.save(model.state_dict(), best_path)
-            logger.info(f"New Best SSG Edge mAP: {best_mAP:.4f}")
+            logger.info(f"New Best SSG Edge mAP: {best_mAP:.4f} saved to {best_path}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("Phase 3 SSG Training Script")

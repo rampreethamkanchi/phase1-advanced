@@ -1,0 +1,1010 @@
+[
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "The surgeon carefully dissected the aberrant hepatic artery, preventing a major vascular injury."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "The surgeon did not proceed to clipping and dividing the two structures, preventing a major vascular injury."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "cut",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "The surgeon did not proceed to cutting the two structures, preventing a major vascular injury."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "The surgeon did not aspirate any fluid, as the procedure was focused on dissecting the aberrant hepatic artery."
+    },
+    {
+        "subject": "cystic artery",
+        "relation": "retract",
+        "object": "hepatic parenchyma",
+        "risk": "High",
+        "explanation": "Aberrant hepatic artery, possibly the right anterior hepatic artery"
+    },
+    {
+        "subject": "cystic duct",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Standard procedure"
+    },
+    {
+        "subject": "cystic artery",
+        "relation": "dissect",
+        "object": "gallbladder wall",
+        "risk": "High",
+        "explanation": "Careful dissection to preserve main arterial trunk"
+    },
+    {
+        "subject": "cystic artery",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Accidental ligation of a hepatic artery may cause clinically signi\ufb01cant liver ischemia in up to 10% of patients"
+    },
+    {
+        "subject": "cystic artery",
+        "relation": "retract",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Accidental ligation of a hepatic artery may cause clinically signi\ufb01cant liver ischemia in up to 10% of patients"
+    },
+    {
+        "subject": "cystic artery",
+        "relation": "retract",
+        "object": "blood vessel",
+        "risk": "High",
+        "explanation": "Accidental ligation of a hepatic artery may cause clinically signi\ufb01cant liver ischemia in up to 10% of patients"
+    },
+    {
+        "subject": "cystic artery",
+        "relation": "retract",
+        "object": "abdominal_wall_cavity",
+        "risk": "High",
+        "explanation": "Accidental ligation of a hepatic artery may cause clinically signi\ufb01cant liver ischemia in up to 10% of patients"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "No specific risk mentioned"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "blood_vessel",
+        "risk": "Medium",
+        "explanation": "Potential for bleeding during dissection"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "gut",
+        "risk": "Low",
+        "explanation": "No specific risk mentioned"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "No specific risk mentioned"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "No specific risk mentioned"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": ""
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_artery",
+        "risk": "Medium",
+        "explanation": ""
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "Calot's triangle",
+        "risk": "Low",
+        "explanation": "Retracting Calot's triangle as a landmark to achieve a critical view of safety"
+    },
+    {
+        "subject": "grasper",
+        "relation": "dissect",
+        "object": "nondissectable scarring or severe fibrosis",
+        "risk": "Medium",
+        "explanation": "Dissecting above the imaginary line connecting the base of the left medial section and the roof of Rouvi\u00e8re's sulcus to achieve a critical view of safety"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood vessel",
+        "risk": "High",
+        "explanation": "Avoiding increase in bile duct injury, particularly vasculo-biliary injury, during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "liver",
+        "relation": "retract",
+        "object": "abdominal_wall_cavity",
+        "risk": "High",
+        "explanation": "The risk of bile duct injury is high when retracting the liver during laparoscopic cholecystectomy."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Clipping the cystic pedicle during laparoscopic cholecystectomy carries a medium risk."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Dissecting the gallbladder from the omentum during laparoscopic cholecystectomy carries a low risk."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "clip",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Clipping the cystic duct during laparoscopic cholecystectomy carries a high risk of bile duct injury."
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Critical",
+        "explanation": "Aspirating blood vessels during laparoscopic cholecystectomy carries a critical risk of bleeding."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "specimen",
+        "risk": "Low",
+        "explanation": "Cutting the gallbladder to remove it as a specimen carries a low risk."
+    },
+    {
+        "subject": "liver",
+        "relation": "retract",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "coagulate",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "fluid",
+        "relation": "aspirate",
+        "object": "specimen",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_wall",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "retract",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "cut",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "wash",
+        "object": "irrigator",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "touching",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to bile leaks and peritonitis"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to bile duct strictures"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to recurrent cholangitis"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to sepsis"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to secondary biliary cirrhosis"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to liver failure"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to mortality"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": "Grasping the liver to access the gallbladder"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Coagulating the cystic pedicle to prevent bleeding"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "Retracting the gallbladder to access the cystic duct"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Cutting the cystic duct to access the bile duct"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Clipping a blood vessel to prevent bleeding"
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "Washing the abdominal wall cavity to remove debris"
+    },
+    {
+        "subject": "liver",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "fluid",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "abdominal_wall_cavity",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "omentum",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "gut",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "specimen",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "gallbladder infundibulum",
+        "relation": "dissect",
+        "object": "peritoneum",
+        "risk": "Low",
+        "explanation": "Peritoneum on the infundibulum is divided on both medial and lateral aspects."
+    },
+    {
+        "subject": "liver bed",
+        "relation": "lift",
+        "object": "gallbladder bed",
+        "risk": "Low",
+        "explanation": "Distal one third of the gallbladder bed should be completely lifted off the liver bed before dividing any tubular structure."
+    },
+    {
+        "subject": "tubular structure",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "No tubular structure should be clipped or cut unless completely (360-degree) encircled."
+    },
+    {
+        "subject": "cystic duct or artery",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Either the cystic duct or artery can be clipped first, depending on the anatomy and ease of the procedure."
+    },
+    {
+        "subject": "electrocautery",
+        "relation": "use",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Electrocautery must be used very cautiously to avoid thermal damage."
+    },
+    {
+        "subject": "tubular structure",
+        "relation": "cut",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "No tubular structure should be clipped or cut unless completely (360-degree) encircled."
+    },
+    {
+        "subject": "scissors or dissector or hook",
+        "relation": "use",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Dissection can be done by scissors, dissector, hook etc. depending on the preference of the surgeon."
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "below",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "near",
+        "object": "cystic_artery",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "touching",
+        "object": "cystic_artery",
+        "risk": "Low",
+        "explanation": "No specific explanation provided"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Establishment of the Critical View of Safety (CVS) technique involves dissection of Calot's triangle to remove fibrous and fatty tissues, ensuring clear identification of the cystic artery and cystic duct prior to clipping and transection."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Establishment of the Critical View of Safety (CVS) technique involves dissection of Calot's triangle to remove fibrous and fatty tissues, ensuring clear identification of the cystic artery and cystic duct prior to clipping and transection."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "transect",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Establishment of the Critical View of Safety (CVS) technique involves dissection of Calot's triangle to remove fibrous and fatty tissues, ensuring clear identification of the cystic artery and cystic duct prior to clipping and transection."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "Calot's triangle",
+        "risk": "Low",
+        "explanation": "The Critical View of Safety (CVS) technique involves dissection of Calot's triangle to remove fibrous and fatty tissues, ensuring clear identification of the cystic artery and cystic duct prior to clipping and transection."
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": "Establishing a secure grasp on the liver"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Medium",
+        "explanation": "Coagulating blood vessels to prevent bleeding"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Retracting the omentum to expose the surgical site"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Cutting the gallbladder during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "Clipping the cystic pedicle to prevent bleeding"
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "Washing the abdominal wall cavity to remove debris"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "clip",
+        "object": "5\u00a0mm non-absorbable polymer clips",
+        "risk": "Low",
+        "explanation": "Sealing the cystic artery"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "clip",
+        "object": "5\u00a0mm non-absorbable polymer clips",
+        "risk": "Low",
+        "explanation": "Sealing the cystic duct"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Identifying the cystic artery"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Identifying the cystic duct"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Identifying the cystic pedicle"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "cut",
+        "object": "laparoscopic scissors",
+        "risk": "Low",
+        "explanation": "Dividing the cystic pedicle"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": ""
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": ""
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "hook",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "scissors",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "clipper",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "irrigator",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_artery",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "liver",
+        "relation": "retract",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": ""
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": ""
+    },
+    {
+        "subject": "hook",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "retract",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "No explanation provided"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "No explanation provided"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": "No explanation provided"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "clip",
+        "object": "cystic_artery",
+        "risk": "Low",
+        "explanation": "No explanation provided"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "gut",
+        "risk": "Low",
+        "explanation": "No explanation provided"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "No explanation provided"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "wash",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "No explanation provided"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "gut",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_artery",
+        "risk": "Low",
+        "explanation": ""
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": ""
+    }
+]

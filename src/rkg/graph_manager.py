@@ -1,6 +1,8 @@
 import networkx as nx
 import torch
 import numpy as np
+import os
+import json
 from .ontology import SURGICAL_ONTOLOGY, SEED_KNOWLEDGE
 
 class RiskGraphManager:
@@ -8,14 +10,13 @@ class RiskGraphManager:
     Manages the Risk Knowledge Graph (RKG).
     Connects Instruments, Anatomy, and Actions to associated Risk Levels.
     """
-    def __init__(self, use_sapbert=False):
+    def __init__(self, use_sapbert=False, rules_path="src/rkg/extracted_rules.json"):
         self.graph = nx.MultiDiGraph()
         self.use_sapbert = use_sapbert
-        self._build_initial_graph()
+        self._build_initial_graph(rules_path)
         
         if self.use_sapbert:
             # We would load the SapBERT model here for semantic matching
-            # For now, we simulate with a simple string-matching fallback
             from transformers import AutoTokenizer, AutoModel
             try:
                  self.tokenizer = AutoTokenizer.from_pretrained("cambridgeltl/SapBERT-from-PubMedBERT-fulltext")
@@ -24,19 +25,41 @@ class RiskGraphManager:
                  self.use_sapbert = False
                  print("Warning: SapBERT not found. Falling back to Symbolic matching.")
 
-    def _build_initial_graph(self):
+    def _build_initial_graph(self, rules_path):
         # Adding nodes from ontology
         for inst in SURGICAL_ONTOLOGY['instruments']:
             self.graph.add_node(inst, type='instrument')
         for anat in SURGICAL_ONTOLOGY['anatomy']:
             self.graph.add_node(anat, type='anatomy')
             
-        # Adding edges (Rules)
+        # Adding Seed Edges (Hardcoded safely rules)
         for rule in SEED_KNOWLEDGE:
+            self._add_rule_to_graph(rule)
+            
+        # Adding Extracted Edges (from LLM)
+        if os.path.exists(rules_path):
+            try:
+                with open(rules_path, 'r') as f:
+                    extracted_rules = json.load(f)
+                    print(f"Loading {len(extracted_rules)} extracted rules from {rules_path}...")
+                    for rule in extracted_rules:
+                        self._add_rule_to_graph(rule)
+            except Exception as e:
+                print(f"Error loading extra rules: {e}")
+
+    def _add_rule_to_graph(self, rule):
+        # Ensure subject and object are in ontology/graph (simple filter)
+        sub = rule['subject'].lower().strip()
+        obj = rule['object'].lower().strip()
+        rel = rule['relation'].lower().strip()
+        
+        # We only add if they match our base ontology nodes for safe matching
+        # In a real SOTA, we would use semantic similarity to map to ontology
+        if self.graph.has_node(sub) and self.graph.has_node(obj):
             self.graph.add_edge(
-                rule['subject'], 
-                rule['object'], 
-                relation=rule['relation'], 
+                sub, 
+                obj, 
+                relation=rel, 
                 risk=rule['risk'], 
                 explanation=rule['explanation'],
                 condition=rule.get('condition', None)
