@@ -1,1010 +1,2655 @@
 [
     {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "The surgeon carefully dissected the aberrant hepatic artery, preventing a major vascular injury."
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "The surgeon did not proceed to clipping and dividing the two structures, preventing a major vascular injury."
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "cut",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "The surgeon did not proceed to cutting the two structures, preventing a major vascular injury."
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "aspirate",
-        "object": "fluid",
-        "risk": "Low",
-        "explanation": "The surgeon did not aspirate any fluid, as the procedure was focused on dissecting the aberrant hepatic artery."
-    },
-    {
-        "subject": "cystic artery",
-        "relation": "retract",
-        "object": "hepatic parenchyma",
-        "risk": "High",
-        "explanation": "Aberrant hepatic artery, possibly the right anterior hepatic artery"
-    },
-    {
-        "subject": "cystic duct",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "Standard procedure"
-    },
-    {
-        "subject": "cystic artery",
-        "relation": "dissect",
-        "object": "gallbladder wall",
-        "risk": "High",
-        "explanation": "Careful dissection to preserve main arterial trunk"
-    },
-    {
-        "subject": "cystic artery",
-        "relation": "retract",
-        "object": "gallbladder",
-        "risk": "High",
-        "explanation": "Accidental ligation of a hepatic artery may cause clinically signi\ufb01cant liver ischemia in up to 10% of patients"
-    },
-    {
-        "subject": "cystic artery",
-        "relation": "retract",
-        "object": "liver",
-        "risk": "High",
-        "explanation": "Accidental ligation of a hepatic artery may cause clinically signi\ufb01cant liver ischemia in up to 10% of patients"
-    },
-    {
-        "subject": "cystic artery",
-        "relation": "retract",
-        "object": "blood vessel",
-        "risk": "High",
-        "explanation": "Accidental ligation of a hepatic artery may cause clinically signi\ufb01cant liver ischemia in up to 10% of patients"
-    },
-    {
-        "subject": "cystic artery",
-        "relation": "retract",
-        "object": "abdominal_wall_cavity",
-        "risk": "High",
-        "explanation": "Accidental ligation of a hepatic artery may cause clinically signi\ufb01cant liver ischemia in up to 10% of patients"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "No specific risk mentioned"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "blood_vessel",
-        "risk": "Medium",
-        "explanation": "Potential for bleeding during dissection"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "gut",
-        "risk": "Low",
-        "explanation": "No specific risk mentioned"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "omentum",
-        "risk": "Low",
-        "explanation": "No specific risk mentioned"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "abdominal_wall_cavity",
-        "risk": "Low",
-        "explanation": "No specific risk mentioned"
-    },
-    {
         "subject": "grasper",
-        "relation": "grasp",
+        "relation": "retract",
         "object": "liver",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "bipolar",
-        "relation": "coagulate",
-        "object": "blood_vessel",
-        "risk": "Low",
-        "explanation": ""
+        "risk": "High",
+        "explanation": "Risk of liver injury due to improper retraction"
     },
     {
         "subject": "hook",
-        "relation": "retract",
-        "object": "gallbladder",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "scissors",
-        "relation": "cut",
-        "object": "cystic_pedicle",
-        "risk": "Medium",
-        "explanation": ""
-    },
-    {
-        "subject": "clipper",
-        "relation": "clip",
-        "object": "cystic_artery",
-        "risk": "Medium",
-        "explanation": ""
-    },
-    {
-        "subject": "irrigator",
-        "relation": "wash",
-        "object": "fluid",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "grasper",
-        "relation": "retract",
-        "object": "Calot's triangle",
-        "risk": "Low",
-        "explanation": "Retracting Calot's triangle as a landmark to achieve a critical view of safety"
-    },
-    {
-        "subject": "grasper",
-        "relation": "dissect",
-        "object": "nondissectable scarring or severe fibrosis",
-        "risk": "Medium",
-        "explanation": "Dissecting above the imaginary line connecting the base of the left medial section and the roof of Rouvi\u00e8re's sulcus to achieve a critical view of safety"
-    },
-    {
-        "subject": "clipper",
-        "relation": "clip",
-        "object": "blood vessel",
-        "risk": "High",
-        "explanation": "Avoiding increase in bile duct injury, particularly vasculo-biliary injury, during laparoscopic cholecystectomy"
-    },
-    {
-        "subject": "liver",
-        "relation": "retract",
-        "object": "abdominal_wall_cavity",
-        "risk": "High",
-        "explanation": "The risk of bile duct injury is high when retracting the liver during laparoscopic cholecystectomy."
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Medium",
-        "explanation": "Clipping the cystic pedicle during laparoscopic cholecystectomy carries a medium risk."
-    },
-    {
-        "subject": "gallbladder",
-        "relation": "dissect",
-        "object": "omentum",
-        "risk": "Low",
-        "explanation": "Dissecting the gallbladder from the omentum during laparoscopic cholecystectomy carries a low risk."
-    },
-    {
-        "subject": "cystic_duct",
-        "relation": "clip",
-        "object": "null",
-        "risk": "High",
-        "explanation": "Clipping the cystic duct during laparoscopic cholecystectomy carries a high risk of bile duct injury."
-    },
-    {
-        "subject": "blood_vessel",
-        "relation": "aspirate",
-        "object": "fluid",
+        "relation": "coagulate",
+        "object": "blood_vessel",
         "risk": "Critical",
-        "explanation": "Aspirating blood vessels during laparoscopic cholecystectomy carries a critical risk of bleeding."
-    },
-    {
-        "subject": "gallbladder",
-        "relation": "cut",
-        "object": "specimen",
-        "risk": "Low",
-        "explanation": "Cutting the gallbladder to remove it as a specimen carries a low risk."
-    },
-    {
-        "subject": "liver",
-        "relation": "retract",
-        "object": "abdominal_wall_cavity",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "gallbladder",
-        "relation": "dissect",
-        "object": "cystic_duct",
-        "risk": "Medium",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_duct",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "blood_vessel",
-        "relation": "coagulate",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "fluid",
-        "relation": "aspirate",
-        "object": "specimen",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "grasper",
-        "relation": "grasp",
-        "object": "cystic_pedicle",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "hook",
-        "relation": "retract",
-        "object": "cystic_duct",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "scissors",
-        "relation": "cut",
-        "object": "cystic_wall",
-        "risk": "Low",
-        "explanation": ""
+        "explanation": "Risk of thermal spread and vessel injury"
     },
     {
         "subject": "clipper",
         "relation": "clip",
-        "object": "blood_vessel",
-        "risk": "Low",
-        "explanation": ""
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of pedicle injury and bleeding"
     },
     {
         "subject": "irrigator",
         "relation": "wash",
         "object": "abdominal_wall_cavity",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Risk of fluid extravasation"
     },
     {
-        "subject": "cystic_pedicle",
-        "relation": "retract",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_pedicle",
+        "subject": "null",
         "relation": "dissect",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "cut",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "aspirate",
-        "object": "fluid",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "wash",
-        "object": "irrigator",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "touching",
-        "object": "blood_vessel",
+        "object": "cystic_artery",
         "risk": "High",
-        "explanation": ""
+        "explanation": "Risk of artery injury and bleeding"
     },
     {
-        "subject": "cystic_pedicle",
+        "subject": "null",
         "relation": "dissect",
-        "object": "null",
+        "object": "cystic_duct",
         "risk": "High",
-        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to bile leaks and peritonitis"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "High",
-        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to bile duct strictures"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "High",
-        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to recurrent cholangitis"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "High",
-        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to sepsis"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "High",
-        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to secondary biliary cirrhosis"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "High",
-        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to liver failure"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "High",
-        "explanation": "Bile duct injuries during laparoscopic cholecystectomy may lead to mortality"
+        "explanation": "Risk of duct injury and bile leak"
     },
     {
         "subject": "grasper",
-        "relation": "grasp",
+        "relation": "retract",
         "object": "liver",
         "risk": "Low",
-        "explanation": "Grasping the liver to access the gallbladder"
-    },
-    {
-        "subject": "bipolar",
-        "relation": "coagulate",
-        "object": "cystic_pedicle",
-        "risk": "Medium",
-        "explanation": "Coagulating the cystic pedicle to prevent bleeding"
+        "explanation": "Risk of liver injury during retraction"
     },
     {
         "subject": "hook",
-        "relation": "retract",
-        "object": "gallbladder",
-        "risk": "Low",
-        "explanation": "Retracting the gallbladder to access the cystic duct"
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Medium",
+        "explanation": "Risk of thermal spread and vessel injury"
     },
     {
         "subject": "scissors",
         "relation": "cut",
-        "object": "cystic_duct",
-        "risk": "Medium",
-        "explanation": "Cutting the cystic duct to access the bile duct"
-    },
-    {
-        "subject": "clipper",
-        "relation": "clip",
-        "object": "blood_vessel",
-        "risk": "High",
-        "explanation": "Clipping a blood vessel to prevent bleeding"
-    },
-    {
-        "subject": "irrigator",
-        "relation": "wash",
-        "object": "abdominal_wall_cavity",
+        "object": "gallbladder",
         "risk": "Low",
-        "explanation": "Washing the abdominal wall cavity to remove debris"
+        "explanation": "Risk of gallbladder injury during dissection"
+    },
+    {
+        "subject": "null",
+        "relation": "null",
+        "object": "null",
+        "risk": "Critical",
+        "explanation": "Risk of major vasculobiliary injuries, including liver ischemia and bile duct ischemia"
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Improper hook dissection can cause liver damage."
+    },
+    {
+        "subject": "null",
+        "relation": "null",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Null relation null object null risk."
     },
     {
         "subject": "liver",
         "relation": "null",
         "object": "null",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Liver null relation null object null risk."
     },
     {
         "subject": "gallbladder",
         "relation": "null",
         "object": "null",
         "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_plate",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_duct",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_artery",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "blood_vessel",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
+        "explanation": "Gallbladder null relation null object null risk."
     },
     {
         "subject": "fluid",
         "relation": "null",
         "object": "null",
         "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "abdominal_wall_cavity",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
+        "explanation": "Fluid null relation null object null risk."
     },
     {
         "subject": "omentum",
         "relation": "null",
         "object": "null",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Omentum null relation null object null risk."
     },
     {
         "subject": "gut",
         "relation": "null",
         "object": "null",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Gut null relation null object null risk."
     },
     {
         "subject": "specimen",
         "relation": "null",
         "object": "null",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Specimen null relation null object null risk."
     },
     {
-        "subject": "gallbladder infundibulum",
-        "relation": "dissect",
-        "object": "peritoneum",
-        "risk": "Low",
-        "explanation": "Peritoneum on the infundibulum is divided on both medial and lateral aspects."
-    },
-    {
-        "subject": "liver bed",
-        "relation": "lift",
-        "object": "gallbladder bed",
-        "risk": "Low",
-        "explanation": "Distal one third of the gallbladder bed should be completely lifted off the liver bed before dividing any tubular structure."
-    },
-    {
-        "subject": "tubular structure",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Medium",
-        "explanation": "No tubular structure should be clipped or cut unless completely (360-degree) encircled."
-    },
-    {
-        "subject": "cystic duct or artery",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Medium",
-        "explanation": "Either the cystic duct or artery can be clipped first, depending on the anatomy and ease of the procedure."
-    },
-    {
-        "subject": "electrocautery",
-        "relation": "use",
-        "object": "null",
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "cystic_pedicle",
         "risk": "High",
-        "explanation": "Electrocautery must be used very cautiously to avoid thermal damage."
+        "explanation": "Risk of injury to the cystic pedicle during retraction"
     },
     {
-        "subject": "tubular structure",
-        "relation": "cut",
-        "object": "null",
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_duct",
         "risk": "Medium",
-        "explanation": "No tubular structure should be clipped or cut unless completely (360-degree) encircled."
+        "explanation": "Risk of improper clipping and injury to the cystic duct"
     },
     {
-        "subject": "scissors or dissector or hook",
-        "relation": "use",
-        "object": "null",
+        "subject": "liver",
+        "relation": "touching",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Risk of injury to the gallbladder during liver retraction"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the cystic plate during gallbladder dissection"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of mistaken retraction of cystic duct for common bile duct"
+    },
+    {
+        "subject": "hook",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of thermal spread from hook causing injury to blood vessels"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of injury to cystic duct during liver dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of injury to cystic duct during gallbladder dissection"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of injury to cystic duct during cystic plate dissection"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "cystic_pedicle",
         "risk": "Low",
-        "explanation": "Dissection can be done by scissors, dissector, hook etc. depending on the preference of the surgeon."
+        "explanation": "Risk of injury to the cystic pedicle during retraction with the grasper"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of injury to the cystic duct during clipping with the clipper"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "gallbladder",
+        "risk": "Critical",
+        "explanation": "Risk of injury to the liver during dissection and retraction of the gallbladder"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Medium",
+        "explanation": "Risk of thermal spread and vessel damage"
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of cystic pedicle injury during dissection"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Risk of omental injury during dissection"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Improper clipping or thermal spread from L-hook may cause bleeding or damage to blood vessels"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "Cutting or damaging the omentum may lead to bleeding or herniation"
+    },
+    {
+        "subject": "hook",
+        "relation": "cut",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of cystic pedicle injury and bleeding"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_artery",
+        "risk": "Medium",
+        "explanation": "Risk of inadequate clipping and bleeding"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": "Risk of cystic duct injury during retraction"
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "cystic_duct",
+        "risk": "Critical",
+        "explanation": "Risk of liver injury during dissection above the cystic duct"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "within",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Risk of gallbladder injury during dissection within the cystic plate"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Risk of injury to the liver during dissection and removal of the gallbladder"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Risk of incomplete or inaccurate cutting of the gallbladder from the cystic plate"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of injury to the cystic plate and surrounding structures during dissection and removal of the cystic duct"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of damaging the cystic pedicle during grasping"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "Risk of damaging the omentum during retraction"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Risk of damaging the gallbladder during cutting"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_artery",
+        "risk": "High",
+        "explanation": "Risk of improper clipping and damage to the cystic artery"
+    },
+    {
+        "subject": "null",
+        "relation": "dissect",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Risk of liver injury during dissection"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": "Risk of thermal spread and damage to surrounding liver tissue during coagulation with the bipolar"
     },
     {
         "subject": "grasper",
         "relation": "grasp",
         "object": "liver",
         "risk": "Low",
-        "explanation": "No specific explanation provided"
+        "explanation": "Grasping the liver can cause bleeding or injury."
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Retracting the omentum can cause injury or bleeding."
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Clipping the cystic pedicle can cause bleeding or hematoma."
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "Critical",
+        "explanation": "Risk of cystic duct injury during scissors cutting"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "cystic_plate",
+        "risk": "Low",
+        "explanation": "Risk of inadequate retraction of the cystic plate"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Risk of inadequate retraction of the cystic pedicle"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Critical",
+        "explanation": "Risk of thermal spread and damage to surrounding blood vessels"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Risk of gallbladder injury or perforation during retraction"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_duct",
+        "risk": "Critical",
+        "explanation": "Risk of clip slippage and bile duct leak"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Risk of liver injury or bleeding during dissection"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Critical",
+        "explanation": "Risk of pedicle injury or bleeding during clipping"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": "Retracting the liver can cause minor bleeding or discomfort"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "gallbladder",
+        "risk": "Critical",
+        "explanation": "Improper cutting of the gallbladder can cause significant bleeding or injury to surrounding structures"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Retracting the cystic pedicle with the hook can cause bleeding or damage to surrounding tissues."
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "Properly clipping the cystic pedicle can prevent bleeding or damage to surrounding tissues."
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": "Improper clipping of the cystic duct may cause bile leak."
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Risk of liver injury due to improper grasping"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of cystic duct injury due to improper cutting"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "gallbladder",
+        "risk": "Medium",
+        "explanation": "Improper cutting of the gallbladder during laparoscopic cholecystectomy can lead to bleeding and bile leakage."
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of cystic pedicle injury and bleeding"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "gallbladder",
+        "risk": "Medium",
+        "explanation": "Risk of gallbladder injury due to improper liver manipulation"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Risk of cystic plate injury and bleeding"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "clip",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of ductal injury and bleeding due to improper clipping"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of pedicle injury and bleeding due to improper clipping"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Risk of liver injury during dissection of cystic plate"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of ductal injury during gallbladder dissection"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "dissect",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Risk of liver injury during dissection of cystic plate"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "clip",
+        "object": "clipper",
+        "risk": "Medium",
+        "explanation": "Risk of improper clipping and ductal injury"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Risk of liver injury or bleeding during retraction"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Risk of cystic pedicle injury during retraction with the grasper"
+    },
+    {
+        "subject": "null",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of cystic duct injury due to improper dissection during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "Risk of gallbladder injury due to improper touching of the liver during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "null",
+        "relation": "cut",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "Risk of gallbladder injury during dissection"
+    },
+    {
+        "subject": "null",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "Risk of fluid aspiration during suction"
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "cystic_plate",
+        "risk": "Low",
+        "explanation": "Risk of liver injury during dissection above the cystic plate"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "near",
+        "object": "cystic_artery",
+        "risk": "High",
+        "explanation": "Risk of arterial injury during dissection near the cystic artery"
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Risk of liver injury or damage during dissection with the hook"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of bleeding due to improper clipping of the cystic pedicle"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Risk of liver injury due to improper dissection of the cystic pedicle"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "retract",
+        "object": "abdominal_wall_cavity",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the cystic duct during retraction"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "coagulate",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of bleeding due to improper coagulation of the cystic artery"
+    },
+    {
+        "subject": "hook",
+        "relation": "touching",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Risk of liver injury due to improper use of the hook"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of injury to the cystic duct during dissection of the liver"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "Critical",
+        "explanation": "Risk of injury to the cystic duct during cutting of the gallbladder"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "Risk of injury to the cystic pedicle during grasping"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of cystic duct injury during retraction"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_pedicle",
+        "risk": "Critical",
+        "explanation": "Risk of cystic pedicle injury and bleeding during clipping"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "cut",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of inadequate cutting of the cystic plate during cholecystectomy"
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "coagulate",
+        "object": "null",
+        "risk": "Critical",
+        "explanation": "Risk of thermal spread and damage to surrounding blood vessels during coagulation"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_artery",
+        "risk": "Critical",
+        "explanation": "Risk of cystic artery injury due to improper clipping"
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "The liver being above the cystic plate can cause bleeding and damage to surrounding structures."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "below",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "The gallbladder being below the cystic duct can cause bile leakage and damage to surrounding structures."
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "within",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "The cystic plate being within the cystic pedicle can cause bleeding and damage to surrounding structures."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "near",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "The cystic duct being near a blood vessel can cause bleeding and hemorrhage."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "touching",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "The cystic pedicle being touching the omentum can cause bleeding and damage to surrounding structures."
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "above",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "A blood vessel being above the cystic duct can cause bleeding and hemorrhage."
+    },
+    {
+        "subject": "fluid",
+        "relation": "within",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "Fluid being within the abdominal wall cavity can cause fluid overload and electrolyte imbalance."
+    },
+    {
+        "subject": "abdominal_wall_cavity",
+        "relation": "near",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "The abdominal wall cavity being near the omentum can cause bleeding and damage to surrounding structures."
+    },
+    {
+        "subject": "omentum",
+        "relation": "above",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "The omentum being above the cystic pedicle can cause bleeding and damage to surrounding structures."
+    },
+    {
+        "subject": "gut",
+        "relation": "near",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "The gut being near the cystic duct can cause bile leakage and damage to surrounding structures."
+    },
+    {
+        "subject": "specimen",
+        "relation": "aspirate",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Aspirating a specimen can cause bleeding and damage to surrounding structures."
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of cystic pedicle injury during liver retraction above the cystic pedicle"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of cystic duct injury during coagulation"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_artery",
+        "risk": "High",
+        "explanation": "Risk of cystic artery injury during cutting"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_duct",
+        "risk": "Critical",
+        "explanation": "Risk of cystic duct injury during coagulation"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Medium",
+        "explanation": "Risk of gallbladder injury during retraction"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "grasp",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of inadequate grasping and manipulation of the cystic plate"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of incomplete or incorrect clipping of the cystic duct"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "retract",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of injury to the cystic pedicle during retraction"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Cutting the cystic duct can cause bleeding and bile leakage."
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "within",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "The cystic plate is within the cystic duct and can cause bleeding and bile leakage if not properly dissected."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "near",
+        "object": "blood_vessel",
+        "risk": "Critical",
+        "explanation": "The cystic duct is near the blood vessel and can cause bleeding and hemorrhage if not properly dissected."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "touching",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "The cystic pedicle is touching the blood vessel and can cause bleeding and hemorrhage if not properly dissected."
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "above",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "The blood vessel is above the cystic pedicle and can cause bleeding and hemorrhage if not properly retracted."
+    },
+    {
+        "subject": "fluid",
+        "relation": "aspirate",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "Aspirating fluid from the abdominal wall cavity can cause fluid overload and electrolyte imbalance."
+    },
+    {
+        "subject": "omentum",
+        "relation": "above",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "The omentum is above the cystic pedicle and can cause bleeding and damage to surrounding structures if not properly retracted."
+    },
+    {
+        "subject": "gut",
+        "relation": "above",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "The gut is above the cystic pedicle and can cause bleeding and damage to surrounding structures if not properly retracted."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "near",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of cystic duct injury due to gallbladder proximity"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of cystic pedicle injury during cystic plate dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of cystic duct injury during gallbladder dissection and cutting"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Medium",
+        "explanation": "Risk of fluid extravasation during cystic duct aspiration"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "clip",
+        "object": "cystic_pedicle",
+        "risk": "Critical",
+        "explanation": "Risk of pedicle damage and bleeding during cystic artery clipping"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_pedicle",
+        "risk": "Critical",
+        "explanation": "Limits and advantages of fundus-first laparoscopic cholecystectomy: lessons learned. J Laparoendosc Adv Surg Tech A 18:69\u201375"
+    },
+    {
+        "subject": "hook",
+        "relation": "cut",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Laparoscopic cholecystectomy: complications and conversions with the 3-trocar technique: a 10-year review. Surg Laparosc Endosc Percutan Tech 17:380\u2013384"
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of cystic duct injury due to improper dissection"
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "gallbladder",
+        "risk": "Medium",
+        "explanation": "The liver can be above the gallbladder, causing difficulty in dissection and potential bleeding."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "below",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "The gallbladder can be below the liver, causing difficulty in dissection and potential bleeding."
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "above",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "The blood vessel can be above the liver, causing difficulty in dissection and potential bleeding."
+    },
+    {
+        "subject": "omentum",
+        "relation": "above",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "The omentum can be above the liver, causing difficulty in dissection and potential bleeding."
+    },
+    {
+        "subject": "gut",
+        "relation": "near",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "The gut can be near a blood vessel, causing bleeding and hemorrhage."
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Risk of liver injury or damage to surrounding tissues due to improper grasping"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of thermal spread from bipolar causing damage to nearby tissues or structures"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_plate",
+        "risk": "Low",
+        "explanation": "Risk of incomplete or inaccurate dissection due to improper cutting"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of damaging the cystic duct during retraction"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Dissecting the gallbladder can cause injury to the cystic duct and surrounding structures."
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Coagulating the cystic artery can cause bleeding and damage to surrounding structures."
+    },
+    {
+        "subject": "null",
+        "relation": "null",
+        "object": "null",
+        "risk": "null",
+        "explanation": "No risk associated with this action."
+    },
+    {
+        "subject": "hook",
+        "relation": "clip",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of cystic pedicle injury and bleeding"
     },
     {
         "subject": "bipolar",
         "relation": "coagulate",
         "object": "cystic_pedicle",
         "risk": "Low",
-        "explanation": "No specific explanation provided"
+        "explanation": "Bipolar instruments usually do not have extensive spread around the operating tip if the current used is brief"
     },
     {
         "subject": "hook",
-        "relation": "retract",
-        "object": "gallbladder",
+        "relation": "cut",
+        "object": "cystic_pedicle",
         "risk": "Low",
-        "explanation": "No specific explanation provided"
+        "explanation": "Risk of thermal injuries at the tip of monopolar instruments"
     },
     {
-        "subject": "scissors",
-        "relation": "cut",
-        "object": "cystic_duct",
+        "subject": "liver",
+        "relation": "touching",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the liver during dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the gallbladder during dissection"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the cystic plate during dissection"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the cystic duct during dissection"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the cystic artery during dissection"
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of bleeding during dissection"
+    },
+    {
+        "subject": "omentum",
+        "relation": "retract",
+        "object": "cystic_pedicle",
         "risk": "Low",
-        "explanation": "No specific explanation provided"
+        "explanation": "Risk of injury to the omentum during retraction"
+    },
+    {
+        "subject": "gut",
+        "relation": "retract",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "Risk of injury to the gut during retraction"
+    },
+    {
+        "subject": "specimen",
+        "relation": "aspirate",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "Risk of fluid extravasation during aspiration"
+    },
+    {
+        "subject": "hook",
+        "relation": "cut",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "The risk of gallbladder injury due to improper hook cutting is high."
+    },
+    {
+        "subject": "hook",
+        "relation": "cut",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Risk of liver damage or bleeding during cutting with the hook"
     },
     {
         "subject": "clipper",
         "relation": "clip",
         "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of bleeding from the blood vessel due to improper clipping"
+    },
+    {
+        "subject": "scissors",
+        "relation": "dissect",
+        "object": "omentum",
         "risk": "Low",
-        "explanation": "No specific explanation provided"
+        "explanation": "Risk of bleeding from the omentum during dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "touching",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": "Risk of injury to the liver during gallbladder manipulation"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "Risk of visceral injury during laparoscopic suture repair or resection"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "gallbladder",
+        "risk": "Medium",
+        "explanation": "Risk of liver injury during dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "Risk of inadequate aspiration of fluid from the gallbladder"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "grasp",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of inadequate grasping of the cystic plate"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Critical",
+        "explanation": "Risk of thermal spread and damage to nearby blood vessels during coagulation of the cystic artery"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "retract",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Risk of damaging the liver during retraction of the cystic pedicle"
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Hook may collide with camera head or instruments, disrupting surgical view."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Cystic duct may be dissected, leading to bleeding or organ damage."
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Cystic artery may be dissected, leading to bleeding or organ damage."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "clipper",
+        "risk": "Critical",
+        "explanation": "Cystic pedicle may not be properly secured, leading to bleeding or organ damage."
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "coagulate",
+        "object": "bipolar",
+        "risk": "High",
+        "explanation": "Blood vessel may not be properly coagulated, leading to bleeding."
+    },
+    {
+        "subject": "fluid",
+        "relation": "aspirate",
+        "object": "irrigator",
+        "risk": "Low",
+        "explanation": "Fluid may not be properly aspirated, leading to inadequate visualization."
+    },
+    {
+        "subject": "abdominal_wall_cavity",
+        "relation": "wash",
+        "object": "irrigator",
+        "risk": "Low",
+        "explanation": "Abdominal wall cavity may not be properly washed, leading to inadequate visualization."
+    },
+    {
+        "subject": "omentum",
+        "relation": "retract",
+        "object": "grasper",
+        "risk": "Low",
+        "explanation": "Omentum may not be properly retracted, leading to inadequate visualization."
+    },
+    {
+        "subject": "gut",
+        "relation": "retract",
+        "object": "grasper",
+        "risk": "Low",
+        "explanation": "Gut may not be properly retracted, leading to inadequate visualization."
+    },
+    {
+        "subject": "specimen",
+        "relation": "aspirate",
+        "object": "irrigator",
+        "risk": "Low",
+        "explanation": "Specimen may not be properly aspirated, leading to inadequate visualization."
+    },
+    {
+        "subject": "hook",
+        "relation": "coagulate",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Thermal spread from L-hook can cause liver damage"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "Improper retraction of omentum can cause bleeding and complications"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": "Bipolar coagulation may cause hemostasis and division of unsupported vascular tissues"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Touching the liver to the cystic duct can cause bleeding or injury to surrounding structures."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "near",
+        "object": "cystic_artery",
+        "risk": "Critical",
+        "explanation": "Being near the cystic artery during gallbladder dissection can cause bleeding or injury to surrounding structures."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "Aspirating fluid from the cystic duct can cause bleeding or injury to surrounding structures."
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "above",
+        "object": "liver",
+        "risk": "Critical",
+        "explanation": "Being above the cystic artery during gallbladder dissection can cause bleeding or injury to surrounding structures."
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "within",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "Being within the omentum during gallbladder dissection can cause bleeding or injury to surrounding structures."
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "No capacitive coupling occurs and inadvertent direct coupling is unlikely."
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Risk of incomplete coagulation of cystic pedicle during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of dissecting cystic duct during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "touching",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Risk of gallbladder touching liver during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Risk of cystic plate injury and potential bleeding"
+    },
+    {
+        "subject": "null",
+        "relation": "null",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Blind application of clips can lead to unintended injury to vital structures"
     },
     {
         "subject": "irrigator",
         "relation": "wash",
-        "object": "abdominal_wall_cavity",
+        "object": "omentum",
         "risk": "Low",
-        "explanation": "No specific explanation provided"
+        "explanation": "Risk of omentum contamination during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "No specific risk mentioned"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "within",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Gallbladder within the cystic duct may cause bleeding or injury during dissection."
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "near",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Cystic plate near the omentum may cause bleeding or injury during dissection."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "touching",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Cystic duct touching a blood vessel may cause bleeding or injury during dissection."
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Dissecting the liver may cause bleeding or injury to surrounding tissues or organs."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Dissecting the gallbladder may cause damage to surrounding tissues or organs, leading to bleeding or injury."
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Dissecting the cystic plate may cause bleeding or injury to surrounding tissues or organs."
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Risk of liver injury during dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Risk of cystic plate injury during gallbladder dissection and cutting"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "cystic_artery",
+        "risk": "Low",
+        "explanation": "Clipping the cystic artery with the clipper may cause bleeding"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Risk of injury to omentum during retraction"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Critical",
+        "explanation": "Risk of injury to liver and cystic duct during dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_artery",
+        "risk": "Critical",
+        "explanation": "Risk of injury to gallbladder and cystic artery during dissection"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "null",
+        "risk": "Critical",
+        "explanation": "Direct contact between the liver and the ultrasound probe may cause bleeding or liver injury."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "touching",
+        "object": "null",
+        "risk": "Critical",
+        "explanation": "Direct contact between the gallbladder and the ultrasound probe may cause bleeding or gallbladder injury."
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "clip",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Improper clipping of the cystic artery may cause bleeding or injury to surrounding structures."
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "specimen",
+        "risk": "Low",
+        "explanation": "Washing the specimen to prepare it for pathologic assessment"
+    },
+    {
+        "subject": "null",
+        "relation": "null",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of delayed bleeding after laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Risk of bleeding from liver biopsy site"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "above",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Risk of bleeding from gallbladder"
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "touching",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of bleeding from blood vessel"
+    },
+    {
+        "subject": "fluid",
+        "relation": "within",
+        "object": "abdominal_wall_cavity",
+        "risk": "High",
+        "explanation": "Risk of fluid accumulation in abdominal cavity"
+    },
+    {
+        "subject": "omentum",
+        "relation": "near",
+        "object": "gut",
+        "risk": "High",
+        "explanation": "Risk of bleeding from omentum"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "liver",
+        "risk": "Critical",
+        "explanation": "Risk of thermal spread and damage to the liver during coagulation with the bipolar"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "Risk of gallbladder injury during grasping"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Critical",
+        "explanation": "Risk of severe bleeding from the liver during dissection"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "omentum",
+        "risk": "High",
+        "explanation": "Bleeding from vessels in the omentum can occur during blunt dissection of adhesions from the gallbladder and liver."
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "cystic_artery",
+        "risk": "High",
+        "explanation": "Inadvertent, tangential injury to the cystic artery can occur during dissection in the triangle of Calot, leading to sudden and pulsatile bleeding."
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Difficulty in grasping the gallbladder due to inflammation and edema"
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "Risk of incomplete removal of stones and bile"
     },
     {
         "subject": "liver",
         "relation": "above",
         "object": "gallbladder",
         "risk": "Low",
-        "explanation": "No specific explanation provided"
+        "explanation": "Liver above gallbladder may cause gallbladder injury"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "below",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Gallbladder below omentum may cause omentum injury"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Improper cystic artery clipping may cause blood vessel injury"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "cut",
+        "object": "gut",
+        "risk": "Medium",
+        "explanation": "Improper cystic pedicle cutting may cause gut injury"
+    },
+    {
+        "subject": "grasper",
+        "relation": "dissect",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Dissecting around the ducts or introducing the catheter may produce a common bile duct injury."
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "abdominal_wall_cavity",
+        "risk": "Low",
+        "explanation": "Risk of bleeding and injury to surrounding tissues during cutting"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "Risk of gallbladder injury during retraction"
+    },
+    {
+        "subject": "hook",
+        "relation": "grasp",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of cystic pedicle injury during hook grasping"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "Medium",
+        "explanation": "Risk of vessel damage during cystic pedicle clipping"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of not grasping anything, which may lead to loss of control of the instrument."
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of not coagulating properly, which may lead to bleeding."
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of not retracting properly, which may lead to instrument damage."
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of not clipping properly, which may lead to bleeding."
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of not washing properly, which may lead to infection."
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the liver, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "within",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the gallbladder, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "within",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the cystic plate, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "within",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the cystic duct, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "within",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the cystic artery, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "within",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the cystic pedicle, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "near",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as blood vessels, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "fluid",
+        "relation": "aspirate",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of not aspirating properly, which may lead to bleeding or infection."
+    },
+    {
+        "subject": "abdominal_wall_cavity",
+        "relation": "within",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the abdominal wall cavity, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "omentum",
+        "relation": "near",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the omentum, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "gut",
+        "relation": "near",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the gut, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "specimen",
+        "relation": "touching",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of not recognizing anatomical danger zones, such as the specimen, which may lead to bleeding or injury."
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "Low",
+        "explanation": "Risk of incomplete ligation of the appendiceal artery"
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "Medium",
+        "explanation": "Risk of vessel damage and bleeding"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "within",
+        "object": "cystic_duct",
+        "risk": "Critical",
+        "explanation": "Risk of gallbladder perforation and bile duct injury"
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "near",
+        "object": "specimen",
+        "risk": "Low",
+        "explanation": "Risk of specimen contamination and bleeding during dissection"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "cystic_plate",
+        "risk": "Low",
+        "explanation": "Blunt, atraumatic graspers are used to avoid injury to the cystic plate."
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": "Blunt, atraumatic graspers are used to avoid injury to the cystic duct."
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "gut",
+        "risk": "Low",
+        "explanation": "The hook is used to retract the gut."
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "specimen",
+        "risk": "Low",
+        "explanation": "The hook is used to retract the specimen."
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "The clipper is used to clip the omentum."
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "gut",
+        "risk": "Low",
+        "explanation": "The clipper is used to clip the gut."
+    },
+    {
+        "subject": "clipper",
+        "relation": "clip",
+        "object": "specimen",
+        "risk": "Low",
+        "explanation": "The clipper is used to clip the specimen."
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "gut",
+        "risk": "Low",
+        "explanation": "The irrigator is used to wash the gut."
+    },
+    {
+        "subject": "scissors",
+        "relation": "dissect",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "Chronic pain has replaced recurrence as the most common complication after either open or laparoscopic hernia repair."
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "omentum",
+        "risk": "High",
+        "explanation": "Risk of injury to omentum during hook dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "Critical",
+        "explanation": "Risk of gallbladder injury or perforation during dissection of cystic plate"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Risk of liver injury during dissection near the cystic plate"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "Grasping the gallbladder and retracting it to expose the porta hepatis can cause injury to surrounding structures."
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "Risk of fluid coagulation and absorption"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "abdominal_wall_cavity",
+        "risk": "Medium",
+        "explanation": "Risk of bleeding and injury to surrounding tissues"
+    },
+    {
+        "subject": "null",
+        "relation": "touching",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Risk of omental injury during dissection"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "specimen",
+        "risk": "Low",
+        "explanation": "Risk of specimen damage or dislodgement during grasping"
+    },
+    {
+        "subject": "hook",
+        "relation": "retract",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "Risk of liver damage or bleeding during hook retraction"
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Coagulating the omentum with the bipolar may cause omentum damage or bleeding."
+    },
+    {
+        "subject": "liver",
+        "relation": "near",
+        "object": "cystic_pedicle",
+        "risk": "Low",
+        "explanation": "The risk is low because the liver is not directly involved in the laparoscopic cholecystectomy procedure."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "within",
+        "object": "abdominal_wall_cavity",
+        "risk": "Medium",
+        "explanation": "The risk is medium because the gallbladder is located within the abdominal wall cavity and can be injured during the procedure."
+    },
+    {
+        "subject": "hook",
+        "relation": "coagulate",
+        "object": "liver",
+        "risk": "Critical",
+        "explanation": "The risk is critical because the hook can cause thermal spread and damage to the liver during coagulation."
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": "Risk of bleeding due to dislodgment of the cystic duct"
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_pedicle",
+        "risk": "Critical",
+        "explanation": "Risk of cystic pedicle injury due to improper cutting during laparoscopic cholecystectomy."
+    },
+    {
+        "subject": "bipolar",
+        "relation": "coagulate",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Risk of liver damage during coagulation"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "cystic_plate",
+        "risk": "Critical",
+        "explanation": "Risk of cystic plate injury during gallbladder removal"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "near",
+        "object": "cystic_artery",
+        "risk": "High",
+        "explanation": "The cystic plate is near the cystic artery and can cause bleeding and hemorrhage if not properly dissected."
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "touching",
+        "object": "blood_vessel",
+        "risk": "Critical",
+        "explanation": "The cystic artery is touching the blood vessel and can cause bleeding and hemorrhage if not properly coagulated."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "near",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of bleeding due to proximity of cystic pedicle to blood vessel"
+    },
+    {
+        "subject": "hook",
+        "relation": "coagulate",
+        "object": "liver",
+        "risk": "Medium",
+        "explanation": "Improper coagulation of the liver tissue can lead to thermal spread and damage to surrounding structures, increasing the risk of conversion."
+    },
+    {
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "Medium",
+        "explanation": "Inadequate dissection of the cystic pedicle can lead to bleeding and injury to surrounding structures."
+    },
+    {
+        "subject": "liver",
+        "relation": "grasp",
+        "object": "liver",
+        "risk": "Low",
+        "explanation": "Risk of liver injury during grasping"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "gallbladder",
+        "risk": "Low",
+        "explanation": "Risk of gallbladder injury during dissection"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Direct injury to the liver can lead to bleeding and aneurysm formation"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "within",
+        "object": "cystic_duct",
+        "risk": "High",
+        "explanation": "Risk of gallbladder injury during dissection within the cystic duct"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of bleeding due to touching the liver and blood vessels during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the cystic duct during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "retract",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of gallbladder injury during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Risk of misidentifying the cystic duct and common bile duct"
+    },
+    {
+        "subject": "liver",
+        "relation": "above",
+        "object": "gallbladder",
+        "risk": "High",
+        "explanation": "Dissection above the gallbladder may lead to biliary injury."
     },
     {
         "subject": "gallbladder",
         "relation": "below",
         "object": "liver",
-        "risk": "Low",
-        "explanation": "No specific explanation provided"
+        "risk": "High",
+        "explanation": "Dissection below the gallbladder may lead to biliary injury."
     },
     {
         "subject": "cystic_pedicle",
-        "relation": "near",
-        "object": "cystic_artery",
-        "risk": "Low",
-        "explanation": "No specific explanation provided"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "touching",
-        "object": "cystic_artery",
-        "risk": "Low",
-        "explanation": "No specific explanation provided"
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "Establishment of the Critical View of Safety (CVS) technique involves dissection of Calot's triangle to remove fibrous and fatty tissues, ensuring clear identification of the cystic artery and cystic duct prior to clipping and transection."
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "clip",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "Establishment of the Critical View of Safety (CVS) technique involves dissection of Calot's triangle to remove fibrous and fatty tissues, ensuring clear identification of the cystic artery and cystic duct prior to clipping and transection."
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "transect",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "Establishment of the Critical View of Safety (CVS) technique involves dissection of Calot's triangle to remove fibrous and fatty tissues, ensuring clear identification of the cystic artery and cystic duct prior to clipping and transection."
-    },
-    {
-        "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "Calot's triangle",
-        "risk": "Low",
-        "explanation": "The Critical View of Safety (CVS) technique involves dissection of Calot's triangle to remove fibrous and fatty tissues, ensuring clear identification of the cystic artery and cystic duct prior to clipping and transection."
-    },
-    {
-        "subject": "grasper",
         "relation": "grasp",
-        "object": "liver",
-        "risk": "Low",
-        "explanation": "Establishing a secure grasp on the liver"
+        "object": "null",
+        "risk": "High",
+        "explanation": "Grasping the cystic pedicle may lead to biliary injury."
     },
     {
-        "subject": "bipolar",
+        "subject": "blood_vessel",
         "relation": "coagulate",
-        "object": "blood_vessel",
-        "risk": "Medium",
-        "explanation": "Coagulating blood vessels to prevent bleeding"
+        "object": "null",
+        "risk": "High",
+        "explanation": "Coagulation of blood vessels may lead to bleeding and biliary injury."
     },
     {
-        "subject": "hook",
-        "relation": "retract",
+        "subject": "gut",
+        "relation": "within",
         "object": "omentum",
         "risk": "Low",
-        "explanation": "Retracting the omentum to expose the surgical site"
+        "explanation": "The gut is within the omentum, and incorrect dissection may lead to biliary injury."
     },
     {
         "subject": "scissors",
         "relation": "cut",
-        "object": "gallbladder",
+        "object": "omentum",
         "risk": "High",
-        "explanation": "Cutting the gallbladder during laparoscopic cholecystectomy"
+        "explanation": "Fibrosis and adhesions surrounding the GB and in the Calot's triangle may be severe in AC, causing difficulty to identify local anatomy and achieve a CVS"
     },
     {
-        "subject": "clipper",
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_duct",
+        "risk": "Critical",
+        "explanation": "Risk of bile duct injury during dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the omentum during cutting and removal of the gallbladder"
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "coagulate",
+        "object": "hook",
+        "risk": "Critical",
+        "explanation": "Risk of thermal spread and damage to nearby blood vessels during coagulation with the hook"
+    },
+    {
+        "subject": "scissors",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Improper dissection of the cystic pedicle can lead to complications, and proper dissection with scissors is crucial to avoid complications."
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Risk of cystic plate injury or damage during cutting"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "Inadequate dissection of the liver and omentum can lead to bleeding and increased risk of complications."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Risk of injury to the cystic pedicle during dissection to access the gallbladder"
+    },
+    {
+        "subject": "null",
+        "relation": "dissect",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "Risk of omental injury during dissection during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "null",
+        "relation": "cut",
+        "object": "gut",
+        "risk": "High",
+        "explanation": "Risk of intestinal injury during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "null",
+        "relation": "touching",
+        "object": "cystic_duct",
+        "risk": "Medium",
+        "explanation": "Risk of cystic duct injury during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "cystic_duct",
         "relation": "clip",
         "object": "cystic_pedicle",
-        "risk": "Low",
-        "explanation": "Clipping the cystic pedicle to prevent bleeding"
-    },
-    {
-        "subject": "irrigator",
-        "relation": "wash",
-        "object": "abdominal_wall_cavity",
-        "risk": "Low",
-        "explanation": "Washing the abdominal wall cavity to remove debris"
+        "risk": "Medium",
+        "explanation": "Risk of pedicle injury during ductal clipping"
     },
     {
         "subject": "cystic_artery",
-        "relation": "clip",
-        "object": "5\u00a0mm non-absorbable polymer clips",
+        "relation": "coagulate",
+        "object": "blood_vessel",
+        "risk": "Medium",
+        "explanation": "Risk of thermal spread and vessel damage during cystic artery coagulation"
+    },
+    {
+        "subject": "abdominal_wall_cavity",
+        "relation": "touching",
+        "object": "null",
         "risk": "Low",
-        "explanation": "Sealing the cystic artery"
+        "explanation": "Risk of injury during abdominal wall manipulation"
+    },
+    {
+        "subject": "omentum",
+        "relation": "retract",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of omental injury during retraction"
+    },
+    {
+        "subject": "gut",
+        "relation": "touching",
+        "object": "null",
+        "risk": "Low",
+        "explanation": "Risk of injury during gut manipulation"
+    },
+    {
+        "subject": "specimen",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "Risk of fluid extravasation during specimen aspiration"
     },
     {
         "subject": "cystic_duct",
-        "relation": "clip",
-        "object": "5\u00a0mm non-absorbable polymer clips",
-        "risk": "Low",
-        "explanation": "Sealing the cystic duct"
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "High",
+        "explanation": "Risk of bile duct injury during laparoscopic cholecystectomy"
     },
     {
-        "subject": "cystic_artery",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "Identifying the cystic artery"
-    },
-    {
-        "subject": "cystic_duct",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "Identifying the cystic duct"
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "cystic_artery",
+        "risk": "High",
+        "explanation": "Careful blunt dissection of Calot's triangle is necessary to avoid bleeding and hemorrhage due to anatomic variations in the cystic artery."
     },
     {
         "subject": "cystic_pedicle",
-        "relation": "dissect",
-        "object": "null",
-        "risk": "Low",
-        "explanation": "Identifying the cystic pedicle"
+        "relation": "grasp",
+        "object": "grasper",
+        "risk": "High",
+        "explanation": "Risk of injury to the cystic pedicle during grasping with the grasper"
     },
     {
-        "subject": "cystic_pedicle",
+        "subject": "hook",
         "relation": "cut",
-        "object": "laparoscopic scissors",
-        "risk": "Low",
-        "explanation": "Dividing the cystic pedicle"
+        "object": "blood_vessel",
+        "risk": "Critical",
+        "explanation": "If surgeons are not aware of possible variations of the RHA, the RHA may be accidentally injured or mistaken for the cystic artery and actively cut off."
+    },
+    {
+        "subject": "scissors",
+        "relation": "cut",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "The reported incidence rate of conversion to open surgery due to intra-operative vascular lesions is approximately 0%-1.9%, with a mortality rate of approximately 0.02%."
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "cystic_artery",
+        "risk": "High",
+        "explanation": "Risk of injury to the cystic artery during dissection of the gallbladder"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of injury to nearby blood vessels during dissection of the cystic duct"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "clip",
+        "object": "blood_vessel",
+        "risk": "Critical",
+        "explanation": "Risk of bleeding or pseudoaneurysm during clipping of the cystic artery"
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of damaging blood vessels during grasping"
     },
     {
         "subject": "hook",
         "relation": "retract",
-        "object": "gallbladder",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of damaging blood vessels during retraction"
+    },
+    {
+        "subject": "irrigator",
+        "relation": "wash",
+        "object": "blood_vessel",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Low risk of damaging blood vessels during irrigation"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of damaging blood vessels during liver dissection"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "dissect",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of damaging blood vessels during gallbladder dissection"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "dissect",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of damaging blood vessels during cystic plate dissection"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "dissect",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of damaging blood vessels during cystic artery dissection"
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "dissect",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Risk of damaging blood vessels during cystic pedicle dissection"
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "touching",
+        "object": "specimen",
+        "risk": "Low",
+        "explanation": "Low risk of damaging blood vessels during specimen handling"
+    },
+    {
+        "subject": "liver",
+        "relation": "touching",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Misperception of anatomical structures can lead to division/occlusion of wrong targets, resulting in BDI/VBI"
+    },
+    {
+        "subject": "liver",
+        "relation": "within",
+        "object": "cystic_pedicle",
+        "risk": "Critical",
+        "explanation": "Risk of liver injury and bleeding during dissection within the cystic pedicle"
+    },
+    {
+        "subject": "grasper",
+        "relation": "retract",
+        "object": "gallbladder",
+        "risk": "Medium",
+        "explanation": "Improper retraction can cause gallbladder injury"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "within",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Gallbladder retraction can cause omentum injury"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Improper dissection can cause cystic duct injury"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Improper dissection can cause cystic artery injury"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "cystic_artery",
+        "risk": "Critical",
+        "explanation": "Risk of artery injury and bleeding during dissection of the cystic duct"
+    },
+    {
+        "subject": "cystic_plate",
+        "relation": "aspirate",
+        "object": "fluid",
+        "risk": "Low",
+        "explanation": "Risk of fluid extravasation during cystic plate aspiration"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "gallbladder",
+        "risk": "Critical",
+        "explanation": "Risk of gallbladder perforation during cutting"
+    },
+    {
+        "subject": "gallbladder",
+        "relation": "near",
+        "object": "cystic_duct",
+        "risk": "Low",
+        "explanation": "The gallbladder may be injured or damaged if it is not properly retracted near the cystic duct during the procedure."
+    },
+    {
+        "subject": "cystic_pedicle",
+        "relation": "cut",
+        "object": "blood_vessel",
+        "risk": "High",
+        "explanation": "Cutting the cystic pedicle may cause bleeding or damage to surrounding blood vessels."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "clip",
+        "object": "bipolar",
+        "risk": "Low",
+        "explanation": "Improper clipping of the cystic duct may cause bile leakage or ductal injury, which may be exacerbated by improper bipolar coagulation."
+    },
+    {
+        "subject": "null",
+        "relation": "dissect",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Risk of omental injury or bleeding during dissection"
+    },
+    {
+        "subject": "null",
+        "relation": "dissect",
+        "object": "gut",
+        "risk": "Low",
+        "explanation": "Risk of gut injury or bleeding during dissection"
+    },
+    {
+        "subject": "liver",
+        "relation": "dissect",
+        "object": "null",
+        "risk": "High",
+        "explanation": "Risk of injury to the liver during dissection"
     },
     {
         "subject": "scissors",
         "relation": "cut",
         "object": "cystic_pedicle",
         "risk": "Medium",
-        "explanation": ""
+        "explanation": "Cutting the cystic pedicle can cause bleeding or injury."
     },
     {
-        "subject": "clipper",
-        "relation": "clip",
-        "object": "blood_vessel",
-        "risk": "High",
-        "explanation": ""
-    },
-    {
-        "subject": "irrigator",
-        "relation": "wash",
-        "object": "abdominal_wall_cavity",
+        "subject": "liver",
+        "relation": "touching",
+        "object": "omentum",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Risk of omental injury during liver retraction"
     },
     {
-        "subject": "hook",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "scissors",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "clipper",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "irrigator",
-        "relation": "null",
-        "object": "null",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "hook",
-        "relation": "retract",
+        "subject": "liver",
+        "relation": "touching",
         "object": "cystic_pedicle",
-        "risk": "Low",
-        "explanation": ""
+        "risk": "Critical",
+        "explanation": "Risk of damaging the liver during dissection near the cystic pedicle"
     },
     {
         "subject": "scissors",
         "relation": "cut",
         "object": "cystic_duct",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Cutting the cystic duct can cause bleeding or injury to surrounding structures"
     },
     {
-        "subject": "clipper",
-        "relation": "clip",
-        "object": "blood_vessel",
+        "subject": "gallbladder",
+        "relation": "cut",
+        "object": "cystic_plate",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "Risk of gallbladder injury during cutting of the cystic plate"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "clip",
+        "object": "clipper",
+        "risk": "High",
+        "explanation": "Risk of iatrogenic injuries to cystic duct during laparoscopic cholecystectomy"
     },
     {
         "subject": "irrigator",
         "relation": "wash",
         "object": "abdominal_wall_cavity",
-        "risk": "Low",
-        "explanation": ""
+        "risk": "Medium",
+        "explanation": "Inadequate washing of the abdominal wall cavity may lead to retained debris and infection."
     },
     {
-        "subject": "grasper",
-        "relation": "grasp",
-        "object": "gallbladder",
-        "risk": "Low",
-        "explanation": ""
+        "subject": "null",
+        "relation": "dissect",
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Risk of injury to the gallbladder wall during dissection"
     },
     {
-        "subject": "bipolar",
-        "relation": "coagulate",
-        "object": "cystic_artery",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "grasper",
-        "relation": "grasp",
+        "subject": "scissors",
+        "relation": "cut",
         "object": "liver",
         "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "bipolar",
-        "relation": "coagulate",
-        "object": "cystic_pedicle",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "hook",
-        "relation": "retract",
-        "object": "gallbladder",
-        "risk": "Low",
-        "explanation": ""
+        "explanation": "Risk of liver injury during dissection"
     },
     {
         "subject": "scissors",
         "relation": "cut",
-        "object": "cystic_duct",
-        "risk": "Low",
-        "explanation": ""
+        "object": "cystic_plate",
+        "risk": "Medium",
+        "explanation": "Cutting the cystic plate can cause bleeding and potential complications, especially if the cystic artery is injured."
     },
     {
-        "subject": "clipper",
-        "relation": "clip",
-        "object": "blood_vessel",
-        "risk": "Low",
-        "explanation": ""
+        "subject": "hook",
+        "relation": "coagulate",
+        "object": "cystic_artery",
+        "risk": "High",
+        "explanation": "Improper coagulation of the cystic artery can lead to bleeding, obscuring the operative field and requiring conversion to open cholecystectomy."
     },
     {
-        "subject": "irrigator",
-        "relation": "wash",
-        "object": "abdominal_wall_cavity",
-        "risk": "Low",
-        "explanation": ""
+        "subject": "gallbladder",
+        "relation": "retract",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "Improper retraction of the gallbladder can lead to injury of the cystic artery, causing uncontrollable bleeding."
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "Improper dissection of the cystic duct can lead to injury of the common bile duct, causing bleeding and requiring conversion to open cholecystectomy."
     },
     {
         "subject": "liver",
         "relation": "retract",
-        "object": "abdominal_wall_cavity",
-        "risk": "Low",
-        "explanation": ""
+        "object": "grasper",
+        "risk": "High",
+        "explanation": "Risk of liver injury during retraction"
+    },
+    {
+        "subject": "cystic_artery",
+        "relation": "clip",
+        "object": "clipper",
+        "risk": "High",
+        "explanation": "Risk of inadequate clipping leading to bleeding"
+    },
+    {
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "hook",
+        "risk": "High",
+        "explanation": "Risk of duct injury during dissection"
+    },
+    {
+        "subject": "omentum",
+        "relation": "retract",
+        "object": "grasper",
+        "risk": "Medium",
+        "explanation": "Risk of omental injury during retraction"
     },
     {
         "subject": "gallbladder",
         "relation": "dissect",
-        "object": "cystic_duct",
+        "object": "cystic_artery",
         "risk": "Medium",
-        "explanation": ""
+        "explanation": "Risk of gallbladder injury during cystic artery dissection"
     },
     {
-        "subject": "cystic_pedicle",
-        "relation": "clip",
-        "object": "blood_vessel",
+        "subject": "cystic_duct",
+        "relation": "dissect",
+        "object": "liver",
         "risk": "High",
-        "explanation": ""
+        "explanation": "Risk of cystic duct injury during liver dissection"
+    },
+    {
+        "subject": "blood_vessel",
+        "relation": "coagulate",
+        "object": "cystic_artery",
+        "risk": "Critical",
+        "explanation": "Risk of thermal spread and cystic artery damage during coagulation"
     },
     {
         "subject": "hook",
-        "relation": "aspirate",
-        "object": "fluid",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "irrigator",
-        "relation": "wash",
-        "object": "omentum",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "gallbladder",
-        "relation": "retract",
-        "object": "abdominal_wall_cavity",
-        "risk": "Low",
-        "explanation": "No explanation provided"
-    },
-    {
-        "subject": "gallbladder",
         "relation": "dissect",
-        "object": "cystic_pedicle",
-        "risk": "Low",
-        "explanation": "No explanation provided"
+        "object": "gallbladder",
+        "risk": "Medium",
+        "explanation": "Risk of gallbladder injury during dissection"
     },
     {
-        "subject": "gallbladder",
-        "relation": "coagulate",
-        "object": "blood_vessel",
-        "risk": "Low",
-        "explanation": "No explanation provided"
-    },
-    {
-        "subject": "gallbladder",
+        "subject": "cystic_duct",
         "relation": "clip",
-        "object": "cystic_artery",
+        "object": "null",
         "risk": "Low",
-        "explanation": "No explanation provided"
+        "explanation": "Risk of cystic duct injury during clipping"
     },
     {
-        "subject": "gallbladder",
-        "relation": "cut",
-        "object": "gut",
+        "subject": "hook",
+        "relation": "dissect",
+        "object": "liver",
         "risk": "Low",
-        "explanation": "No explanation provided"
-    },
-    {
-        "subject": "gallbladder",
-        "relation": "aspirate",
-        "object": "fluid",
-        "risk": "Low",
-        "explanation": "No explanation provided"
-    },
-    {
-        "subject": "gallbladder",
-        "relation": "wash",
-        "object": "omentum",
-        "risk": "Low",
-        "explanation": "No explanation provided"
+        "explanation": "Careful dissection with the hook is necessary to avoid damaging the surrounding liver tissue."
     },
     {
         "subject": "bipolar",
         "relation": "coagulate",
-        "object": "blood_vessel",
-        "risk": "Low",
-        "explanation": ""
-    },
-    {
-        "subject": "hook",
-        "relation": "retract",
         "object": "cystic_pedicle",
-        "risk": "Low",
-        "explanation": ""
+        "risk": "High",
+        "explanation": "Risk of thermal spread and bleeding during coagulation"
     },
     {
-        "subject": "scissors",
-        "relation": "cut",
-        "object": "gut",
-        "risk": "Low",
-        "explanation": ""
+        "subject": "cystic_plate",
+        "relation": "below",
+        "object": "omentum",
+        "risk": "Medium",
+        "explanation": "The cystic plate is below the omentum and can cause bleeding and damage to surrounding structures if not properly retracted."
     },
     {
-        "subject": "clipper",
-        "relation": "clip",
-        "object": "cystic_artery",
-        "risk": "Low",
-        "explanation": ""
+        "subject": "cystic_pedicle",
+        "relation": "touching",
+        "object": "liver",
+        "risk": "High",
+        "explanation": "The cystic pedicle is touching the liver and can cause bleeding and damage to surrounding structures if not properly retracted."
     },
     {
-        "subject": "irrigator",
-        "relation": "wash",
+        "subject": "blood_vessel",
+        "relation": "within",
+        "object": "abdominal_wall_cavity",
+        "risk": "High",
+        "explanation": "The blood vessel is within the abdominal wall cavity and can cause bleeding and damage to surrounding structures if not properly ligated."
+    },
+    {
+        "subject": "omentum",
+        "relation": "above",
+        "object": "cystic_plate",
+        "risk": "High",
+        "explanation": "The omentum is above the cystic plate and can cause bleeding and damage to surrounding structures if not properly retracted."
+    },
+    {
+        "subject": "gut",
+        "relation": "within",
         "object": "abdominal_wall_cavity",
         "risk": "Low",
-        "explanation": ""
+        "explanation": "The gut is within the abdominal wall cavity and can cause infection and reduce the risk of complications if not properly drained."
+    },
+    {
+        "subject": "null",
+        "relation": "null",
+        "object": "gallbladder",
+        "risk": "Critical",
+        "explanation": "Risk of gallbladder perforation and stone spillage during laparoscopic cholecystectomy"
+    },
+    {
+        "subject": "liver",
+        "relation": "within",
+        "object": "cystic_pedicle",
+        "risk": "High",
+        "explanation": "In the presence of combined arterial and biliary injury, the possibility of biliary ischemic damage and liver necrosis is increased."
+    },
+    {
+        "subject": "grasper",
+        "relation": "grasp",
+        "object": "omentum",
+        "risk": "Low",
+        "explanation": "Risk of omental injury or entrapment during grasping with the grasper."
     }
 ]

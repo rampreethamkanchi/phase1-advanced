@@ -4,7 +4,7 @@ import numpy as np
 from tqdm import tqdm
 from sklearn.metrics import average_precision_score
 
-def evaluate_sg_model(model, dataloader, device, logger):
+def evaluate_sg_model(model, dataloader, device, logger, is_sample_run=False):
     """
     Evaluates Phase 3 Scene Graph model.
     Metrics:
@@ -52,11 +52,19 @@ def evaluate_sg_model(model, dataloader, device, logger):
             energy_correct += (energy_preds.cpu() == energy_gt.cpu()).sum().item()
             energy_total += B
             
+            if is_sample_run and batch_idx >= 5:
+                logger.info("Sample run: Breaking eval loop early for quick test.")
+                break
+            
     # Calculate mAP for edges
     all_edge_preds = np.vstack(all_edge_preds)
     all_edge_gts = np.vstack(all_edge_gts)
     
-    edge_map = average_precision_score(all_edge_gts, all_edge_preds, average='macro', zero_division=0)
+    # Secure against stray NaNs in predictions breaking sklearn metrics
+    all_edge_preds = np.nan_to_num(all_edge_preds, nan=0.0)
+    all_edge_gts = np.nan_to_num(all_edge_gts, nan=0.0)
+    
+    edge_map = average_precision_score(all_edge_gts, all_edge_preds, average='macro')
     energy_acc = energy_correct / energy_total if energy_total > 0 else 0.0
     
     logger.info(f"--- SSG Evaluation Results ---")

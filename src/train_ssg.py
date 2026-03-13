@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 import argparse
 import datetime
@@ -25,10 +26,20 @@ def setup_logger(log_dir="./logs"):
         format='[%(asctime)s] %(levelname)s - %(message)s',
         handlers=[
             logging.FileHandler(log_file),
-            logging.StreamHandler()
+            logging.StreamHandler(sys.stdout)
         ]
     )
+    logging.captureWarnings(True)
     logger = logging.getLogger()
+    
+    def handle_exception(exc_type, exc_value, exc_traceback):
+        if issubclass(exc_type, KeyboardInterrupt):
+            sys.__excepthook__(exc_type, exc_value, exc_traceback)
+            return
+        logger.error("Uncaught exception", exc_info=(exc_type, exc_value, exc_traceback))
+
+    sys.excepthook = handle_exception
+    
     return logger, log_file
 
 def train_one_epoch(epoch, model, dataloader, optimizer, criterion, device, logger, scaler, args):
@@ -59,6 +70,8 @@ def train_one_epoch(epoch, model, dataloader, optimizer, criterion, device, logg
         scaler.scale(loss).backward()
         
         if ((batch_idx + 1) % args.grad_accum_steps == 0) or (batch_idx + 1 == len(dataloader)):
+            scaler.unscale_(optimizer)
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5.0)
             scaler.step(optimizer)
             scaler.update()
             optimizer.zero_grad()
@@ -87,6 +100,9 @@ def main(args):
     device = torch.device(args.device if torch.cuda.is_available() else "cpu")
     if device.type == 'cuda':
         torch.cuda.set_device(device)
+        torch.backends.cudnn.benchmark = True
+        torch.backends.cuda.matmul.allow_tf32 = True
+        torch.backends.cudnn.allow_tf32 = True
     
     logger.info(f"Initializing DataLoaders for SSG-VQA from: {args.dataset_dir}")
     train_dl, _ = get_dataloader_ssg(args.dataset_dir, split='train', batch_size=args.batch_size, num_workers=args.num_workers, pin_memory=args.pin_memory)
@@ -135,9 +151,9 @@ def main(args):
         scheduler.step()
         
         logger.info(f"--- Running SSG Evaluation for Epoch {epoch} ---")
-        eval_metric = evaluate_sg_model(model, val_dl, device, logger)
+        eval_metric = evaluate_sg_model(model, val_dl, device, logger, is_sample_run=args.sample_run)
         
-        if args.sample_run and epoch == 2:
+        if args.sample_run and epoch == 1:
             break
             
         is_best = eval_metric > best_mAP
@@ -164,7 +180,7 @@ if __name__ == "__main__":
     parser.add_argument("--pretrained_backbone", type=str, default="logs/best_model.pt", help="Path to best phase 1 model")
     parser.add_argument("--freeze_backbone", action="store_true", default=True)
     parser.add_argument("--use_amp", action="store_true", default=True)
-    parser.add_argument("--pin_memory", action="store_true", default=False)
+    parser.add_argument("--pin_memory", action="store_true", default=True)
     
     parser.add_argument("--sample_run", action="store_true", help="Quick test")
     

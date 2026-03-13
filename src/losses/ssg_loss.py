@@ -23,8 +23,8 @@ class SceneGraphLoss(nn.Module):
         """
         B, N, _, C = edge_logits.shape
         
-        # 1. Edge Loss
-        raw_edge_loss = self.edge_criterion(edge_logits, edge_gt) # (B, N, N, C)
+        # 1. Edge Loss (Force float32 for stable BCE with logit)
+        raw_edge_loss = self.edge_criterion(edge_logits.float(), edge_gt.float()) # (B, N, N, C)
         
         # Mask out padded regions
         if num_valid_nodes is not None:
@@ -38,11 +38,11 @@ class SceneGraphLoss(nn.Module):
             
             # Compute mean only over valid pairs
             valid_loss = raw_edge_loss.masked_select(mask)
-            edge_loss = valid_loss.mean() if valid_loss.numel() > 0 else torch.tensor(0.0).to(edge_logits.device)
+            edge_loss = valid_loss.mean() if valid_loss.numel() > 0 else raw_edge_loss.sum() * 0.0
         else:
             edge_loss = raw_edge_loss.mean()
             
         # 2. Energy Loss (Auxiliary Task from Phase 3 plan)
-        energy_loss = self.energy_criterion(energy_logits, energy_gt)
+        energy_loss = self.energy_criterion(energy_logits.float(), energy_gt.float())
         
         return edge_loss, energy_loss

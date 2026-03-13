@@ -177,8 +177,9 @@ class SSGVQADataset(Dataset):
         # Pad nodes
         padded_nodes = np.ones(MAX_NODES, dtype=np.int64) * -1
         padded_bboxes = np.zeros((MAX_NODES, 4), dtype=np.float32)
-        padded_nodes[:len(nodes)] = nodes
-        padded_bboxes[:len(nodes)] = bboxes
+        if len(nodes) > 0:
+            padded_nodes[:len(nodes)] = nodes
+            padded_bboxes[:len(nodes)] = bboxes
         
         # Pad Edges
         # Edges -> (MAX_NODES, MAX_NODES, NUM_EDGE_CLASSES)
